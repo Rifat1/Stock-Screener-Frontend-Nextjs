@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+
+    environment:
+      BACKEND_URL: "http://localhost:80"  # my backend service name
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:3000"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
