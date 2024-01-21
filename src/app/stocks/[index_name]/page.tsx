@@ -6,6 +6,7 @@ import { Stock } from '../../../utils/stock_Interface'; // Defined my Stock type
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Pagination, SortDescriptor} from "@nextui-org/react";
 import { columns } from '@/utils/nextui_columns';
 import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 
 
