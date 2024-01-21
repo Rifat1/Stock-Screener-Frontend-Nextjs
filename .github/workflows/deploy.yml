@@ -34,3 +34,5 @@ jobs:
             docker-compose down   # Stop existing containers
             docker-compose build  # Build the updated Docker image
             docker-compose up -d  # Start new containers
+        env:
+          DEBUG: true
