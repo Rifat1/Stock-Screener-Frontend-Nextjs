@@ -7,7 +7,7 @@ services:
       - "3000:3000"
 
     environment:
-      BACKEND_URL: "http://localhost:80"  # my backend service name
+      BACKEND_URL: "http://http://54.166.200.70:80"  # my backend service name
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:3000"]
       interval: 5s
