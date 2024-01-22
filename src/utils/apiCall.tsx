@@ -29,7 +29,8 @@ export const fetchStocks = async (
 ) => {
     if (indexName === 'TSX60') { return []}
     try {
-        const response = await axios.get(`https://54.166.200.70/stocks/${indexName}`,{
+        // https://stockdat.com/api/stocks/SP500, https://54.166.200.70/api/stocks/${indexName}
+        const response = await axios.get(`https://stockdat.com/api/stocks/${indexName}`,{
             withCredentials: true,
           });
         console.log(response.data);
