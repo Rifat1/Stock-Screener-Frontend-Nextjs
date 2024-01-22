@@ -29,7 +29,7 @@ export const fetchStocks = async (
 ) => {
     if (indexName === 'TSX60') { return []}
     try {
-        const response = await axios.get(`http://54.166.200.70/stocks/${indexName}`,{
+        const response = await axios.get(`https://54.166.200.70/stocks/${indexName}`,{
             withCredentials: true,
           });
         console.log(response.data);
