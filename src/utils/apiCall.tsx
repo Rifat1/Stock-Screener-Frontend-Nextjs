@@ -27,7 +27,7 @@ import axios from 'axios';
 export const fetchStocks = async (
   indexName: string,
 ) => {
-    if (indexName === 'TSX60') { return []}
+    // if (indexName === 'TSX60') { return []}
     try {
         // https://stockdat.com/api/stocks/SP500, https://54.166.200.70/api/stocks/${indexName}
         const response = await axios.get(`https://stockdat.com/api/stocks/${indexName}`,{
