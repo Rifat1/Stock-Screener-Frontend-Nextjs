@@ -6,9 +6,7 @@ import React from "react";
 import {Select, SelectItem, Avatar} from "@nextui-org/react";
 import {Button} from "@nextui-org/react";
 import Link from 'next/link'
-import {NextUIProvider} from "@nextui-org/react";
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+
 
 
 export default function Home() {
@@ -25,10 +23,8 @@ export default function Home() {
   };
 
   return (
-    <NextUIProvider>
-      <Header/>
       <main >
-        <div className="container mx-auto mt-20 text-center">
+        <div className="container mx-auto mt-20 max-w-5xl px-10 text-center">
           <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
             Welcome to StockDat, An index based stock market Screener
           </h1>
@@ -63,7 +59,5 @@ export default function Home() {
         
         </div>
       </main>
-      <Footer/>
-    </NextUIProvider>
   );
 }

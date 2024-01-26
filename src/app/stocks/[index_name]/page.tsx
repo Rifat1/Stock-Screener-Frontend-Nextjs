@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Stock } from '../../../utils/stock_Interface'; // Defined my Stock type
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Pagination, SortDescriptor} from "@nextui-org/react";
 import { columns } from '@/utils/nextui_columns';
-import Header from '@/components/Header';
+
 
 import Footer from '@/components/Footer';
 
@@ -69,9 +69,7 @@ export default function IndexScreenPage({ params }: { params: { index_name : str
 
 
   return (
-   <div>
-    <div className="">
-    <Header/>
+  <div>
     <div className="IndexScreenPage container mx-auto mt-10 text-center">
       <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Stocks for {index}</h1>
       <Table className="mb-6" isStriped aria-label="table with dynamic content and pagination" sortDescriptor={sortDescriptor} onSortChange={setSortDescriptor}
@@ -92,22 +90,18 @@ export default function IndexScreenPage({ params }: { params: { index_name : str
         wrapper: "min-h-[222px]",
       }}
       >
-      <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key} allowsSorting={true}>{column.label}</TableColumn>}
-      </TableHeader>
-      <TableBody items={items} >
-        {(item) => (
-          <TableRow key={item.Symbol}>
-            {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
-          </TableRow>
-        )}
-      </TableBody>
-      </Table>
-      
-    </div>
-    
-    </div>
-    <Footer/>
-    </div>
+        <TableHeader columns={columns}>
+          {(column) => <TableColumn key={column.key} allowsSorting={true}>{column.label}</TableColumn>}
+        </TableHeader>
+        <TableBody items={items} >
+          {(item) => (
+            <TableRow key={item.Symbol}>
+              {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>    
+    </div>  
+  </div>
   );
   }
